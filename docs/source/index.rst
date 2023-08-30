@@ -30,3 +30,9 @@ Admin-guides
    :caption: GDTk
 
    install-gdtk
+
+.. toctree:: 
+   :maxdepth: 2
+   :caption: Postfix
+
+   install-postfix

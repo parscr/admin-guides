@@ -1,28 +1,39 @@
 Install Gitlab-ce
 -----------------
 
-Ubuntu 22.04.2 LTS
+Prerequisites
 
+Ubuntu 22.04.2 LTS
+Postfix - :doc:`install-postfix`
+
+
+#Update packages that are already installed
 
 .. code-block:: bash 
 
-   sudo apt update
-   sudo apt upgrade -y
+    sudo apt update
+    sudo apt upgrade -y
 
-#Install Prereqs
+#Reboot
 
 .. code-block:: bash
 
-sudo apt install tzdata curl ca-certificates openssh-server
+    sudo reboot
 
-#import GPG key
+#Install Dependencies
+
+.. code-block:: bash
+
+    sudo apt install tzdata curl ca-certificates openssh-server
+
+#Import GPG key (Import the GPG key so we can use third-party software)
 
 .. code-block:: bash 
 
     gpg_key_url="https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey"
     curl -fsSL $gpg_key_url| sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/gitlab.gpg
 
-#add the repository
+#Add the repository
 
 .. code-block:: bash
 
@@ -31,19 +42,19 @@ sudo apt install tzdata curl ca-certificates openssh-server
     deb-src https://packages.gitlab.com/gitlab/gitlab-ce/ubuntu/ focal main
     EOF
 
-# Update again
+#Update again
 
 .. code-block:: bash
 
     sudo apt update
 
-#install gitlab-ce
+#Install gitlab-ce
 
 .. code-block:: bash
 
     sudo apt install gitlab-ce
 
-#configure firewall
+#Configure firewall
 
 .. code-block:: bash
 
