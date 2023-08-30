@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'user-guides'
+project = 'admin-guides'
 copyright = '2023, parscr'
 author = 'parscr'
 release = '1.0.0'
